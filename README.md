@@ -63,9 +63,9 @@ feedback = reg(3) XOR reg(0)
 ## Project Files
 
 * `lfsr.vhd` → Main VHDL design file
-* `output waveform.png` → Simulation waveform output
-* `architecture.png` → LFSR architecture diagram
-* `flowchart.pdf` → Detailed flowchart involving flip flops and feedback 
+* `output waveform.jpg` → Simulation waveform output
+* `architecture.jpg` → LFSR architecture diagram
+* `flowchart.jpg` → Detailed flowchart involving flip flops and feedback 
 
 ---
 
