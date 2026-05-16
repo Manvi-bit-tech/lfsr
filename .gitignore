@@ -1,0 +1,8 @@
+oss-cad-suite/
+*.tgz
+*.tar.gz
+*.bin
+*.so.*
+obj_dir/
+*.vcd
+*.wave
