@@ -2,13 +2,15 @@
 
 ## Overview
 
-This project implements a 4-bit Linear Feedback Shift Register (LFSR)-based Pseudo Random Number Generator using VHDL. The design demonstrates sequential logic behavior, feedback mechanisms, and pseudo-random sequence generation commonly used in digital systems and communication applications.
+This project implements a 4-bit Linear Feedback Shift Register (LFSR)-based Pseudo Random Number Generator using VHDL. The design demonstrates sequential logic behavior, feedback mechanisms, and pseudo-random sequence generation commonly used in digital systems, communication systems, and test-pattern generation.
+
+The project was simulated and verified using the OSS CAD Suite workflow with waveform analysis support through GTKWave.
 
 ---
 
 ## Objective
 
-To design and simulate a pseudo-random number generator using LFSR architecture and verify its behavior using waveform simulation and testbench validation.
+To design and simulate a pseudo-random number generator using LFSR architecture and verify its functionality through waveform simulation and testbench validation.
 
 ---
 
@@ -16,10 +18,10 @@ To design and simulate a pseudo-random number generator using LFSR architecture 
 
 The design consists of:
 
-* 4 D Flip-Flops connected as a shift register
-* XOR feedback logic
+* 4-bit Shift Register
+* XOR-based feedback logic
 * Clock and reset control
-* Sequential shifting operation for pseudo-random sequence generation
+* Sequential pseudo-random sequence generation
 
 Primitive Polynomial Used:
 
@@ -37,17 +39,17 @@ feedback = reg(3) XOR reg(0)
 
 ## Working Principle
 
-* The register is initialized with a non-zero seed value (`0001`).
-* On every rising clock edge:
+* The register is initialized using a non-zero seed value (`0001`).
+* On every rising edge of the clock:
 
-  * bits are shifted sequentially,
-  * feedback is generated using XOR logic,
-  * the feedback bit is inserted into the register.
-* This process generates a repeating pseudo-random sequence.
+  * register bits shift sequentially,
+  * XOR feedback is generated,
+  * feedback bit is inserted into the register.
+* This process generates a deterministic pseudo-random binary sequence.
 
 ---
 
-## Technologies & Tools Used
+## Tools & Technologies Used
 
 * VHDL
 * OSS CAD Suite
@@ -56,27 +58,30 @@ feedback = reg(3) XOR reg(0)
 * Digital System Design
 * Testbench Verification
 
-
 ---
 
-## Files Included
+## Project Files
 
-* `lfsr_prng.vhd` → Main VHDL source code
-* `tb_lfsr.vhd` → Testbench code
-* `waveform.png` → Simulation waveform output
-* `report.pdf` → Project report and architecture diagrams
+* `lfsr.vhd` → Main VHDL design file
+* `output waveform.png` → Simulation waveform output
+* `architecture.png` → LFSR architecture diagram
+* `flowchart.pdf` → Detailed flowchart involving flip flops and feedback 
 
 ---
 
 ## Simulation & Verification
 
-The design was verified using:
+The project was verified using:
 
-* clock-driven simulation,
-* waveform analysis,
-* testbench validation techniques.
+* waveform simulation,
+* testbench validation,
+* sequential output analysis.
 
-The waveform output confirms the sequential generation of pseudo-random binary sequences.
+GTKWave was used to analyze output waveforms and verify pseudo-random sequence generation behavior.
+
+---
+
+
 
 ---
 <img width="1600" height="349" alt="image" src="https://github.com/user-attachments/assets/eccd652c-b649-400f-9dda-e85107292453" />
@@ -85,16 +90,14 @@ The waveform output confirms the sequential generation of pseudo-random binary s
 
 <img width="1600" height="865" alt="image" src="https://github.com/user-attachments/assets/996b0bb0-b98a-438a-84aa-c9e04d9fe1a1" />
 
-
-
 ## Applications
 
 LFSRs are widely used in:
 
 * Cryptography
 * Communication Systems
-* Digital Signal Processing
 * Built-In Self-Test (BIST)
+* Digital Signal Processing
 * Error Detection & Correction
 * Test Pattern Generation
 
@@ -107,8 +110,9 @@ Through this project, I gained understanding of:
 * shift register operations,
 * feedback logic implementation,
 * pseudo-random sequence generation,
-* VHDL-based digital design,
-* simulation and verification flow.
+* VHDL-based digital design flow,
+* simulation and waveform analysis,
+* testbench verification methodology.
 
 ---
 
@@ -116,3 +120,4 @@ Through this project, I gained understanding of:
 
 Manvi Dhamija
 B.Tech – Electronics & Communication Engineering
+
